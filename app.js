@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+
 var app = express();
 
 // view engine setup
@@ -23,7 +24,6 @@ app.all('*', function(req, res, next) {
     if(req.method=="OPTIONS") res.send(200);/*让options请求快速返回*/
     else  next();
 });
-
 
 
 app.use(logger('dev'));
